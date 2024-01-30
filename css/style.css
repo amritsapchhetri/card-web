@@ -1,0 +1,154 @@
+root {
+    --input-active: hsl(249, 99%, 64%);
+    --white: hsl(0, 0%, 100%);
+    --l-violet: hsl(270, 3%, 87%);
+    --d-violet: hsl(279, 6%, 55%);
+    --vd-violet: hsl(278, 68%, 11%);
+  
+    --font-size: 18px;
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+font-family:font-family: "Space Grotesk", sans-serif;
+}
+
+ html{
+    font-size: var(--font-size);
+ }
+
+.container {
+   
+}
+.card {
+    height: 500px;
+    background-image:url("../images/bg-main-mobile.png") ;
+    background-repeat: no-repeat ;
+    background-size: cover;
+    position: relative;
+}
+
+.card-front{
+    background-image:url("../images/bg-main-mobile.png");
+    /* background-repeat:no-repeat ; */
+    width: 447px;
+    height: 245;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position:absolute
+    z-index: 10;
+    top: 50%
+
+}
+.card-number{
+    font-size: 1.6rem;
+    letter-spacing: 3.88px;
+color: var(--white)
+}
+.meta{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--white)
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+
+.card-back{
+    width:447px;
+    height:245;
+    background-image:url("../images/bg-card-back.png");
+    background-color: no-repeat;
+    position: relative;
+}
+
+.cvc {
+    position:relative
+    color: white;
+    right: 2.8rem;
+    top: 50%;
+    transform: translate(-50%);
+}
+
+.form {
+    margin-top: 5 rem;
+    padding: 2 rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.form-group{
+    display:flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+.label {
+    text-transform: uppercase;
+    color: var(--d-violet);
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+.form-control{
+    padding: 0.6rem 1rem;
+    border-radius: 5px;
+
+}
+.group{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap:10px;
+}
+
+.group-inner{
+    display: flex;
+    gap: 10px;
+}
+
+.group-inner input{
+    flex:1;
+    width:55px;
+}
+
+
+.button{
+    background-color: var(--d-violet);
+    font-size: 18px;
+    border-radius: 10px;
+
+}
+
+@media (min-width: 1024px){
+    .container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+.card {
+    height: 100px;
+    background-image: url("../images/bg-card-back.png");
+}
+.card-front{
+    bottom: 50%;
+    top:auto;
+    left:33%
+}
+.card_back{
+    top: 55%
+    left:50%
+}
+}
+.error{
+    font-size: 14px;
+    color:red;
+    display: none;
+    margin-top: 0.rem;
+}
+.input-error{
+    border-color: red;
+}
